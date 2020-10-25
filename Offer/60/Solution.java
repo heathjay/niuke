@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 
 public class TreeNode {
@@ -12,31 +13,25 @@ public class TreeNode {
     }
 
 }
-import java.util.LinkedList;
+
 public class Solution {
-    public ArrayList<ArrayList<Integer> > Print(TreeNode pRoot) {
+    ArrayList<ArrayList<Integer> > Print(TreeNode pRoot) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
-        boolean flag = true;
         if(pRoot == null) return res;
         LinkedList<TreeNode> list = new LinkedList<>();
         list.add(pRoot);
         while(!list.isEmpty()){
-            int size = list.size();
             ArrayList<Integer> tmp = new ArrayList<>();
-            for(int i = 0; i < size; i++){
-                TreeNode node = list.remove();
-                if(flag){
-                    tmp.add(node.val);
-                }else{
-                    tmp.add(0,node.val);
-                }
-                if(node.left != null) list.add(node.left);
+            int size = list.size();
+            for(int i = 0 ; i < size; i++){
+                TreeNode node = list.remove(0);
+                tmp.add(node.val);
+                if(node.left!=null) list.add(node.left);
                 if(node.right != null) list.add(node.right);
-            } 
+            }
             if(!tmp.isEmpty()) res.add(tmp);
-            flag = !flag;
         }
         return res;
     }
-
+    
 }
