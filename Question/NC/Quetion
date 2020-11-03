@@ -1,0 +1,13 @@
+
+1.string，stringbuilder，stringbuffer的区别
+2.你知道的集合，哪些是线程安全的
+3.常见的异常有哪些
+4.throw和throws的区别
+5.try-catch-finally中finally的作用
+6.打印异常堆栈的函数？应该是printStackTrace，当时紧张想不起来函数名了
+7.exception又分为哪些？常见的运行时异常有哪些？
+8.线程的实现方式？sleep和wait有什么区别？
+9.数据库隔离级别？事务的特性？索引结构(这个好像有，记不太清了)
+10.redis的缓存穿透和缓存雪崩
+11.问了一下Spring相关，和面试官说没用过，项目用的另一个后端框架vertx，介绍了一下vertx，面试官就没深入问spring
+12.对苏宁的了解(吹了一波苏宁s10进决赛，把面试官说笑了)

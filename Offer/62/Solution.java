@@ -10,6 +10,7 @@ public class TreeNode {
     }
 
 }
+/*
 import java.util.Stack;
 public class Solution {
     
@@ -36,4 +37,28 @@ public class Solution {
     }
 
 
+}
+*/
+public class Solution {
+    int count = 0;
+    TreeNode result = null;
+    void help(TreeNode root, int k){
+        if(root == null) return;
+        help(root.left,k);
+        count++;
+        if(count == k){
+            result = root;
+            return;
+        }
+        if(count > k){
+            return ;
+        }
+        else{
+            help(root.right, k);
+        }
+    }
+    TreeNode KthNode(TreeNode pRoot, int k){
+        help(pRoot, k);
+        return result;
+    }
 }

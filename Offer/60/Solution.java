@@ -13,7 +13,7 @@ public class TreeNode {
     }
 
 }
-
+/*
 public class Solution {
     ArrayList<ArrayList<Integer> > Print(TreeNode pRoot) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
@@ -34,4 +34,30 @@ public class Solution {
         return res;
     }
     
+}
+*/
+public class Solution {
+    ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        if(pRoot == null){
+            return res;
+        }
+        dfs(pRoot, 0 , res);
+        return res;
+    }
+    private void dfs(TreeNode pRoot, int deep, ArrayList<ArrayList<Integer>> res){
+        if(pRoot == null){
+            return;
+        }
+        if(deep >= res.size()){
+            ArrayList<Integer> list = new ArrayList<>();
+            list.add(pRoot.val);
+            res.add(list);
+        }else{
+            ArrayList<Integer> list = res.get(deep);
+            list.add(pRoot.val);
+        }
+        dfs(pRoot.left, deep + 1, res);
+        dfs(pRoot.right, deep + 1 , res);
+    }
 }
