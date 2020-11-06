@@ -18,7 +18,7 @@ public class Solution {
      */
     public int lowestCommonAncestor (TreeNode root, int o1, int o2) {
         // write code here
-        return CommonAncestor(root, o1, o2);
+        return CommonAncestor(root, o1, o2).val;
     }
 
     public TreeNode CommonAncestor(TreeNode root, int o1, int o2){

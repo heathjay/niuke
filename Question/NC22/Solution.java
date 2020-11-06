@@ -23,9 +23,12 @@ public class Solution {
             return;
         }
         if(ptr2 >= 0){
-            A[res] = B[ptr2];
-            res--;
-            ptr2--;
+            while(ptr2 >= 0){
+                A[res] = B[ptr2];
+                res--;
+                ptr2--;
+            }
+
         }
 
         return;

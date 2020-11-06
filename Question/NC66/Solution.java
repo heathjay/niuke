@@ -16,8 +16,8 @@ public class Solution {
             p1 = p1.next;
             p2 = p2.next;
             if(p1 != p2){
-                if(p1 == null) p1 = pHead1;
-                if(p2 == null) p2 = pHead2; 
+                if(p1 == null) p1 = pHead2;
+                if(p2 == null) p2 = pHead1; 
             }
         }
         return p1;

@@ -17,14 +17,17 @@ public class Solution {
             if(sarry[i] == '[' || sarry[i] == '(' || sarry[i] == '{'){
                 stack.push(sarry[i]);
             }else if(sarry[i] == ']' ){
+                if(stack.isEmpty()) return false;
                 char tmp = stack.pop();
-                if(tmp != '[' || stack.isEmpty()) return false;
+                if(tmp != '[') return false;
             }else if(sarry[i] == ')'){
+                if(stack.isEmpty()) return false;
                 char tmp = stack.pop();
-                if(tmp != '(' || stack.isEmpty()) return false;
+                if(tmp != '(' ) return false;
             }else if(sarry[i] == '}'){
+                if(stack.isEmpty()) return false;
                 char tmp = stack.pop();
-                if(tmp != '{' || stack.isEmpty()) return false;
+                if(tmp != '{' ) return false;
             }
         }
         if(stack.isEmpty()) return true;

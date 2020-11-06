@@ -10,17 +10,14 @@ public class Solution {
      */
     public int[] twoSum (int[] numbers, int target) {
         // write code here
-        int[] res = new int[2];
-        int n = numbers.length;
-        for(int i = 0; i < n ; i++){
-            int mid = target - numbers[i];
-            for(int j = i+1; j < n ;j++){
-                if(mid == numbers[j]){
-                    res[0] = i;
-                    res[1]=j;
-                    return res;
-                }
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int cur = 0, tmp ; cur < numbers.length; cur++){
+            tmp = numbers[cur];
+            if(map.containsKey(target-tmp)){
+                return new int[]{map.get(target-tmp) +1 ,cur + 1};
             }
+            map.put(tmp,cur);
         }
+        return null;
     }
 }
