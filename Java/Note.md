@@ -163,3 +163,7 @@ int + ""
 ## 字符串的截取
 public String substring​(int beginIndex)
 Returns a string that is a substring of this string. The substring begins with the character at the specified index and extends to the end of this string. 
+
+
+# TreeSet
+Note that the ordering maintained by a set (whether or not an explicit comparator is provided) must be consistent with equals if it is to correctly implement the Set interface. (See Comparable or Comparator for a precise definition of consistent with equals.) This is so because the Set interface is defined in terms of the equals operation, but a TreeSet instance performs all element comparisons using its compareTo (or compare) method, so two elements that are deemed equal by this method are, from the standpoint of the set, equal. The behavior of a set is well-defined even if its ordering is inconsistent with equals; it just fails to obey the general contract of the Set interface. 
