@@ -8,4 +8,13 @@ public class Solution {
         boolean isStop = (m != 0) && (result = (n & mask[m & 1]) + positiveProduction(m>>1, n<<1)) != 0;
         return result;
     }
+
+
+
+   public int Sum_Solution(int n){
+       boolean x = n > 1 && (n += Sum_Solution(n-1)) != 0;
+       return n;
+   }
+
+
 }

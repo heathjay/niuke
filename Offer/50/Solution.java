@@ -20,4 +20,24 @@ public class Solution {
         }
         return false;
     }
+
+    public boolean duplicate_1(int numbers[], int length, int [] duplication) {
+        if (numbers == null || length == 0) {
+            return false;
+        }
+        for (int i = 0; i < length; i++) {
+            while (numbers[i] != i) {
+                if (numbers[i] == numbers[numbers[i]]) {
+                    duplication[0] = numbers[i];
+                    return true;
+                }
+                else {
+                    int temp = numbers[i];
+                    numbers[i] = numbers[temp];
+                    numbers[temp] = temp;
+                }
+            }
+        }
+        return false;
+    }
 }
