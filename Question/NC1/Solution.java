@@ -22,17 +22,20 @@ public class Solution {
             char x = (n-1) >= 0 ? sarr[n-1] : '0';
             char y = (m-1) >= 0 ? tarr[m-1] : '0';
             carry += (x - '0') + (y - '0');
-            res[l] = String.valueOf(carry % 10）;
+            res[l] = (char)(carry % 10 + '0');
             carry = carry / 10;
             n--;
             m--;
             l--;
         }
         if(carry == 1){
-            res[0] = '1'
-            return res;
+            res[0] = '1';
+            return new String(res);
         }else{
-            return res.substring(1);
+            return (new String(res)).substring(1);
         }
+    }
+    public static void main(){
+        char i = '0';
     }
 }

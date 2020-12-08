@@ -16,7 +16,7 @@ public class Solution {
             sum += pcol % 10;
             pcol = pcol /10;
         }
-        return sum != threshold;
+        return sum <= threshold;
     }
     public void help(int prow, int pcol, int threshold, int rows, int cols){
         if(prow < 0|| pcol < 0 || prow >= rows || pcol >= cols || flag[prow][pcol]) return;
