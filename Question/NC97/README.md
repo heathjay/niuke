@@ -31,3 +31,7 @@
 备注:
 
 1≤N≤1051 \leq N \leq 10^51≤N≤10
+
+
+
+Assignment●Prerequisites●Ensure that you have git installed●Write, compile and run a simple `hello world` program in Go●Ensure that `docker run hello-world` works●Complete the Docker Compose getting started tutorial●Afterwards:●https://se-gitlab.inf.tu-dresden.de/se2/se2-w-2019/se2-w-2019-assignment1/blob/master/README.rst

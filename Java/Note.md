@@ -173,3 +173,18 @@ Note that the ordering maintained by a set (whether or not an explicit comparato
 ## BigInteger
 java.math.BigInteger
 BigInteger nFactorial = BigInteger.ONE;
+
+
+## Map iterator
+    public boolean check(){
+        Iterator iter = ori.entrySet().iterator();
+        while(iter.hasNext()){
+            Map.Entry entry = (Map.Entry) iter.next();
+            Character key = (Character) entry.getKey();
+            Integer val = (Integer) entry.getValue();
+            if(cnt.getOrDefault(key,0) < val){
+                return false;
+            } 
+        }
+        return true;
+    }
