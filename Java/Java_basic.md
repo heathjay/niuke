@@ -149,3 +149,58 @@ ID -> Name 就是 int(7 digit) -> string，7 位数也就是 1000 w，可以开�
 
 选择随机节点
 主要解释下A选项，如果是数组只要遍历一半元素就可以了，翻转的思想类似于字符串逆序，但链表如果要完成逆序，就算只是修改指针也要把所有的元素遍历完，所以相比而言数组还是比链表快的。 
+# Which statement declares a variable a which is suitable for referring to an array of 50 string objects?（Java）
+ BCF 
+在java 中，声明一个数组时，不能直接限定数组长度，只有在创建实例化对象时，才能对给定数组长度.。
+如下，1，2,3可以通过编译，4，5不行。而String是Object的子类，所以上述BCF均可定义一个存放50个String类型对象的数组。
+1. String a[]=new String[50];
+2. String b[];
+3. char c[];
+4. String d[50];
+5. char e[50];
+# 对静态成员的不正确描述是___________静态成员函数拥有this指针
+静态数据成员要在类内声明 ，类外定义和初始化 
+# 3 进程的基本特性是（）。
+进程是动态的、多个进程可以含有相同的程序和多个进程可以并行运行
+
+# 静态外部变量只在本文件内可用。请问这句话的说法是正确的吗？ 正确
+
+#  以下代码共调用多少次拷贝构造函数：	
+Widget f(Widget u)
+{  
+   Widget v(u);
+   Widget w=v;
+   return w;
+}
+main(){
+    Widget x;
+    Widget y=f(f(x));
+}
+
+
+答案为 D 。
+y=f(f(x)) 有两层 f() ，为了说明过程，把里面的一层标明为 f_1 ，外面一层标明为 f_2 。则 7 次调用分别是：
+                              x  ->  f_1 的 u
+
+f_1 的 u  ->  f_1 的 v
+
+f_1 的 v  ->  f_1 的 w
+
+f_1 的 w  ->  f_2 的 u
+
+f_2 的 u  ->  f_2 的 v
+
+f_2 的 v  ->  f_2 的 w
+
+f_2 的 w  ->  y
+
+# 关于ThreadLocal类 以下说法正确的是
+
+
+ThreadLocal是采用哈希表的方式来为每个线程都提供一个变量的副本
+
+ThreadLocal保证各个线程间数据安全，每个线程的数据不会被另外线程访问和破坏
+
+ThreadLocal继承Object，相当于没继承任何特殊的。
+ThreadLocal没有实现任何接口。
+ThreadLocal并不是一个Thread，而是Thread的局部变量。

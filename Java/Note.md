@@ -188,3 +188,5 @@ BigInteger nFactorial = BigInteger.ONE;
         }
         return true;
     }
+
+# 在软件维护工作中，如果对软件的修改只限制在原需求说明书的范围之内，这种维护是属于(  )。纠正性维护
