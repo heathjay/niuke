@@ -134,3 +134,5 @@ C： delete from book  删除数据表中的数据，可以回退，可添加whe
 D：语法错误。 del *from book;
 
 # 在微机中，VGA的含义是__________显示标准
+
+# 
