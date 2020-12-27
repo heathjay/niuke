@@ -415,3 +415,6 @@ System.out.println(b.show(b));    ⑦ ⑦   B and B
 System.out.println(b.show(c));    ⑧ ⑧   B and B
 
 System.out.println(b.show(d));    ⑨ ⑨   A and D
+
+
+# 面向对象建模得到的模型包含系统的3个要素，即静态结构、交互次序和数据变换（ ） 对

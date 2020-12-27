@@ -14,7 +14,7 @@ class Solution {
         }
         return maxans;
     }
-    public int longestValidParentheses(String s) {
+    public int longestValidParentheses1(String s) {
 
         int max = 0;
         Stack<Integer> stack = new Stack<>();
