@@ -10,3 +10,4 @@ class Solution {
         return len-1;
     }
 }
+

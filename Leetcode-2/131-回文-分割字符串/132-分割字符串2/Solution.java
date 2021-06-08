@@ -1,12 +1,10 @@
 class Solution {
     boolean[][] f ;
     int n;
-    List<String> ans = new ArrayList<>();
-    int minT ;
+
     public int minCut(String s) {
         n = s.length();
         if(n == 0) return 0;
-        minT = n-1;
         f = new boolean[n][n];
         for (int i = 0; i < n; ++i) {
             Arrays.fill(f[i], true);
@@ -17,23 +15,23 @@ class Solution {
                 f[i][j] = s.charAt(i) == s.charAt(j) && f[i+1][j-1];
             }
         }
-        dfs(s,0);
-        return minT;
-    }
 
-    public void dfs(String s, int i){
-        if(i == n){
-            minT = Math.min(minT, ans.size()-1);
-            ans = new ArrayList<String>();
-            return;
-        }
 
-        for(int j = i; j <n ;j++){
-            if(f[i][j]){
-                ans.add(s.substring(i,j+1));
-                dfs(s, j+1);
-                ans.remove(ans.size() -1);
+        int[] g = new int[n];
+        Arrays.fill(g, Integer.MAX_VALUE);
+        for(int i =0; i < n ; i++){
+            if(f[0][i]){
+                g[i] = 0;
+            }else{
+                for(int j = 0 ; j < i; j++){
+                    if(f[j+1][i]){
+                        g[i] = Math.min(g[i], g[j] + 1);
+                    }
+                }
             }
         }
+        return g[n-1];
     }
+
+
 }

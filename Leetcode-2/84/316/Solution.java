@@ -4,7 +4,7 @@ class Solution {
         boolean[] vis = new boolean[26];
         int[] num = new int[26];
 
-        for(int i = 0 ; i < s.length; i++){
+        for(int i = 0 ; i < s.length(); i++){
             num[s.charAt(i) - 'a'] ++;
         }
 

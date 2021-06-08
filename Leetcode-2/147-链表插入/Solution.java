@@ -15,7 +15,7 @@ class Solution {
         ListNode dummy = new ListNode(0);
 
         dummy.next = head;
-        ListNode mark = head, cur = head;
+        ListNode mark = head, cur = head.next;
         while(cur != null){
             if(mark.val <= cur.val){
                 mark=mark.next;

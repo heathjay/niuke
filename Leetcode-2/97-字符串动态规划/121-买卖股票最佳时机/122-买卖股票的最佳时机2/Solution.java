@@ -11,4 +11,17 @@ class Solution {
         }
         return dp[n-1][0];
     }
+    public int maxProfit(int[] prices) {
+        int n = prices.length;
+        int dp0 = 0, dp1 = -prices[0];
+        for(int i = 1; i< n; i++){
+            int newdp0 = Math.max(dp0, dp1 + prices[i]);
+            int newdp1 = Math.max(dp0 - prices[i], dp1);
+
+            dp0 = newdp0;
+            dp1 = newdp1;
+        }
+
+        return dp0;
+    }
 }

@@ -38,9 +38,13 @@ class Solution {
 
             for(TreeNode left : leftTrees){
                 for(TreeNode right : rightTrees){
-                    
+                    TreeNode cur = new TreeNode(i);
+                    cur.left = left;
+                    cur.right = right;
+                    allTrees.add(cur);
                 }
             }
         }
+        return allTrees;
     }
 }

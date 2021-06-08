@@ -42,7 +42,7 @@ class Solution {
 
                 if(!stack.isEmpty()){
                     int temp = height[stack.peek()];
-                    int hight = Math.min(stack.peek(), temp) - height[popnum];
+                    int hight = Math.min(height[i], temp) - height[popnum];
                     int width = i - stack.peek() -1;
                     water += hight * width;
                 }

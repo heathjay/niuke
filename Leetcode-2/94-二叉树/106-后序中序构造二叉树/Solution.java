@@ -22,8 +22,8 @@ class Solution {
         this.postorder = postorder;
         this.inorder = inorder;
         postIndex = postorder.length - 1;
-        for(int i = 0; i < postIndex; i++){
-            map.put(postorder[i], i);
+        for (Integer val : inorder) {
+            map.put(val, idx++);
         }
         return help(0, inorder.length - 1);
     }
