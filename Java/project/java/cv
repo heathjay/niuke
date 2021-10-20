@@ -1,0 +1,118 @@
+
+德累斯顿工业大学计算机系统工程实验室实习 (TU Dresden)
+学生工
+7. 2020 12. 2020
+1. 比较不同的 Intel SGX 框架结构在 Rust 编程方面的运用，包括 Baidu Rust-SGX-SDK, Fortanix EDP 和 SCONE。 
+2. 通过设计Docker Image,让TIKV(PingCAP的分布式数据库)能运行在SCONE lib上。
+
+
+德累斯顿工业大学分布式实验室实习
+学生工
+8. 2019 10. 2019
+1. 编写shell脚本去实现关于SCONE文档中的范例screencast(https://sconedocs.github.io).
+2. 理解并使用SCONEEnclave的具体应用，安全计算，密钥分发，保护数据等。
+
+
+硕士论文：Secure-TiKV: A Confidential Distributed Transactional Key-value Database
+主要负责人
+1. 研究最新的基于云计算的安全键值存储系统，并专注于基于 TEE 的系统 (Intel SGX)。
+2. 将TiKV与SCONE编译/集成以在Intel SGX enclave内运行TiKV，实现安全的分布式事务键值数据库。
+3. 设计基于SCONE CAS的部署策略，来安全地部署我们的数据库。
+4. 提供机制以确保存储的数据始终加密:静态中、传输中和处理过程中。 
+5. 进行实验以测量在主内存、静态等中加密对性能的影响。
+6. 提供提高key-value存储系统性能的方法。
+7. 将secure-TiKV与Kubernetes集成，对系统进行可扩展性评估
+负责实现上述硕士论文要求
+
+探究在 IEEE 和 ACM 杂志上的发行模式
+主要负责人
+12. 2019 01. 2020
+1. 实验目的是调查 IEEE 和 ACM 期刊中的出版模式
+2. 用python编写网络爬虫获取IEEE和ACM期刊的出版数据(2015-2019)，使用数据统计的方法(平均值,方差，SVD
+等)，使用 matlab 统计并总结不同主编、不同杂志、不同年份的相关性，最终数据和分析作为教授的论文中的一部分。
+
+作为实验负责人独立完成上述实验内容。
+并行计算课程实验
+01. 2019
+主要负责人
+1. 在Docker Container中实现Floyd-Warshall算法的并发计算，并根据Amdahl’sLaw去计算相关的计算速度信息。 
+2. 理解并行的相关算法，包括mutex locks,synchronization和caching,以及物理设备对计算速度的影响。
+
+
+在线图书馆项目
+12.2018-10.2018
+主要负责人
+1. 编写html网页，用户在 web 前端提交输入表单，表单包括所要提交的文档，和元数据。 
+2. Nginx容器提供web服务用于传递静态内容，包括访问页面等前端文件。
+3. 使用 HBase 作为数据库，ZooKeeper 用于提供锁服务来保证数据的 CAP，所有 GServer 需要在 ZooKeeper 中进行注册。 
+4. golang编写的反向代理，用于分发请求到Nginx服务器，以及增删改查的请求给正在运行的gsever。 
+5. 所有服务都在相应的Docker Container中
+按照实验要求完成相应任务
+
+
+MapReduce 应用实践
+主要负责人
+Nov 2018 Oct 2018
+1. 使用MapReduce和Hadoop根据输入文档中页面访问的历史记录，统计URL出现的频率
+2. 根据纽约市一天的出租车记录，统计每个小时出租车数量
+
+Memcached Benchmark 实验
+Nov 2018 Oct 2018
+1. 编写Docker image运行Memcached。
+2. 编写运行Memcached benchmark的image。
+3. 运行两个容器，容器之间使用ssh相互交互，最后使用R语言进行绘图。
+
+志愿者， EuroSys 2019 会议
+1. 作为与会者的向导，并且在部分会议期间传递麦克风和反馈设备信息
+2. 这次经历增加了我的沟通技巧和临场处理技能，并且对当下的热门研究方向有了部分的了解。
+
+算法工程师，浙江温州长江电子公司
+1. 设计并改进汽车自动空调算法
+2. 并把算法模型转换成C语言的在不同微处理器中的具体实现。
+3. 参与车辆最后标定
+
+
+
+2016 美国大学生数学建模大赛二等奖
+2015-2016  吉林大学二等奖学金
+2015-2016  吉林大学电子设计大赛二等奖
+2014-2015  吉林大学电子设计大赛二等奖
+2014-2015  中国大学生数学建模大赛省二等
+2013-2014  吉林大学三等奖学金
+
+系统工程，移动通信与网络，安全与编码，事务信息系统，系统设计与模式， 分布式操作系统，基于组件的软件系统，网络与网页编程，预测和评估技术，并发和分布式系统的基础， 软件容错，
+
+作者：Mao0
+链接：https://www.nowcoder.com/discuss/750213?type=all&order=time&pos=&page=1&ncTraceId=&channel=-1&source_id=search_all_nctrack
+来源：牛客网
+
+上来讲了下项目，都快背出了
+然后开始八股
+Q: 事务是什么知道吗？
+A: 没回答好，直接讲acid的特性了
+Q:事务的隔离级别
+A:八股，都解释下
+Q:MySQL默认的是什么
+A: 可重复读
+Q: Python的装饰器讲一下
+Q:Python的列表和元组
+Q:Java虚拟机的功能
+Q:JVM和JRE的关系
+Q: JVM包含哪些区域
+Q:用socket实现tcp/udp的区别
+Q:讲一讲TCP和UDP的区别
+Q:进程间的通讯
+Q:悲观锁乐观锁
+Q:Hashmap 的实现
+Q:Hashtable和hashmap的区别,hashmap的插入元素的操作
+
+计算机体系结构、操作系统、计算机网络、虚拟化、存储、分布式系统、安全、监控运维、数据库、数据分析、机器学习、系统自动化等；
+
+1972 1011
+1971 0219
+
+
+
+Christof Fetzer
+
+信号与系统，电路基础，通信原理，数字通信原理，随机信号处理，数字电路，模拟电路，计算机网络，操作系统，数据结构与算法，单片机原理，数字信号处理，微机原理

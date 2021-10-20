@@ -3,7 +3,7 @@ class Solution {
         int len = nums.length;
         if(len == 0) return 0;
         int[] dp = new int[len];
-
+        dp[0] = 1;
         int maxlen = 1;
         for(int i = 1; i < len;i++){
             dp[i] = 1;
